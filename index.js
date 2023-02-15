@@ -10,7 +10,7 @@ const bot = new Client({ intents: [
 ] });
 
 const fs = require('fs');
-const TOKEN = fs.readFileSync('TOKEN', 'utf8');
+const TOKEN = fs.readFileSync('TOKEN', 'utf8').trim();
 
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 var commands = {};

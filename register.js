@@ -1,7 +1,7 @@
 const { REST, Routes } = require('discord.js');
 const fs = require('fs');
 
-const TOKEN = fs.readFileSync('TOKEN');
+const TOKEN = fs.readFileSync('TOKEN', 'utf8').trim();
 
 const rest = new REST({ version: '10' }).setToken(TOKEN);
 
