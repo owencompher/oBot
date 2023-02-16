@@ -14,7 +14,7 @@ for(var commandFile of commandFiles) {
 }
 
 console.log('Started refreshing application (/) commands.');
-rest.put(Routes.applicationCommands('749728118633136129'), { body: commands })
+rest.put(Routes.applicationCommands('827690516258488381'), { body: commands })
   .then(response => {
     console.log(response);
     console.log('Successfully reloaded application (/) commands.');

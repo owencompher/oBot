@@ -19,8 +19,12 @@ for(var commandFile of commandFiles) {
     commands[command.info.name] = command;
 }
 
+var data = require('./data.js');
+bot.data = data;
+
 bot.on('interactionCreate', async interaction => {
-    if (interaction.isChatInputCommand()) {
+    if (interaction.isChatInputCommand()
+     || interaction.isMessageContextMenuCommand()) {
         try {
             commands[interaction.commandName].execute(interaction, bot);
         } catch (err) {
